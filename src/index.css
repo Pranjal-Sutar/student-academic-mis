@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Status badges */
+.badge-pending {
+  @apply bg-amber-100 text-amber-700 border border-amber-200;
+}
+.badge-completed {
+  @apply bg-emerald-100 text-emerald-700 border border-emerald-200;
+}
+.badge-overdue {
+  @apply bg-red-100 text-red-700 border border-red-200;
+}
+.badge-attention {
+  @apply bg-orange-100 text-orange-700 border border-orange-200;
+}
+
+/* Card base */
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-slate-100 p-5;
+}
+
+/* Focus ring */
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
